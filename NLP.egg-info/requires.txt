@@ -1,0 +1,9 @@
+numpy
+scikit-learn
+pandas
+matplotlib
+seaborn
+nltk
+unicode
+streamlit
+unicode

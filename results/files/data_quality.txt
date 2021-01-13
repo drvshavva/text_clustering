@@ -1,0 +1,45 @@
+#################################################
+############ DATA QUALITY RESULT ################
+#################################################
+
+Number of sample in data set:204135.
+Number of classes in data set: 11 and they are: ['Longform' 'Reports' 'Exclusive' 'Book Reviews' 'newspaper' 'general'
+ 'broadcast' 'business' None 'radio' 'wire'].
+Columns in data set:['id', 'title', 'author', 'date', 'content', 'year', 'month', 'publication', 'category', 'digital', 'section', 'url'].
+
+
+
+################### INFO ########################
+
+None.
+
+
+
+############## SUMMARY STATISTICS ###############
+
+                  id        digital
+count  204135.000000  193115.000000
+mean   128740.365807       1.060435
+std     75939.869673       1.200331
+min         1.000000       0.000000
+25%     59649.500000       0.000000
+50%    127039.000000       1.000000
+75%    194646.500000       1.000000
+max    271698.000000       4.000000.
+
+
+
+############## NULL PERCENTAGES #################
+
+Column: id  percent of null values:  %0.0.
+Column: title  percent of null values:  %0.0.
+Column: author  percent of null values:  %15.742033458250667.
+Column: date  percent of null values:  %6.173855536777133.
+Column: content  percent of null values:  %6.345800573150121.
+Column: year  percent of null values:  %6.173855536777133.
+Column: month  percent of null values:  %6.173855536777133.
+Column: publication  percent of null values:  %3.7793616969162565.
+Column: category  percent of null values:  %17.352242388615377.
+Column: digital  percent of null values:  %5.39838832145394.
+Column: section  percent of null values:  %63.46927278516668.
+Column: url  percent of null values:  %51.60261591593798.

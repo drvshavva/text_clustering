@@ -1,0 +1,29 @@
+.. K-Means Text Clustering Pipeline documentation master file, created by
+   sphinx-quickstart on Sun Dec 13 12:02:09 2020.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to K-Means Text Clustering Pipeline's documentation!
+============================================================
+.. image:: C:\\Users\\user\\Desktop\\nlp_project\\data\\kmeans.gif
+   :width: 750
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   src
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+.. note::
+   This documentation includes K-Means text clustering operation explanation.
+
+.. versionadded:: 1.0

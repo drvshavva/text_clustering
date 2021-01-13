@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>src.features package &#8212; K-Means Text Clustering Pipeline  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">K-Means Text Clustering Pipeline  documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="src-features-package">
+<h1>src.features package<a class="headerlink" href="#src-features-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-src.features.feature_engineering">
+<span id="src-features-feature-engineering-module"></span><h2>src.features.feature_engineering module<a class="headerlink" href="#module-src.features.feature_engineering" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="src.features.feature_engineering.FeatureEngineering">
+<em class="property">class </em><code class="sig-prename descclassname">src.features.feature_engineering.</code><code class="sig-name descname">FeatureEngineering</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span><span class="o">=</span><span class="default_value">'tf_idf'</span></em>, <em class="sig-param"><span class="n">analizer</span><span class="o">=</span><span class="default_value">'word'</span></em>, <em class="sig-param"><span class="n">n_gram</span><span class="o">=</span><span class="default_value">(1, 1)</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.features.feature_engineering.FeatureEngineering" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class applies text feature engineering operations: tf-idf, cv or word2vec</p>
+<dl class="py method">
+<dt id="src.features.feature_engineering.FeatureEngineering.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">corpus</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.features.feature_engineering.FeatureEngineering.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="src.features.feature_engineering.FeatureEngineering.fit_transform">
+<code class="sig-name descname">fit_transform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">corpus</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.features.feature_engineering.FeatureEngineering.fit_transform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="src.features.feature_engineering.FeatureEngineering.get_frequency_based_model">
+<code class="sig-name descname">get_frequency_based_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.features.feature_engineering.FeatureEngineering.get_frequency_based_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="src.features.feature_engineering.FeatureEngineering.transform">
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">corpus</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.features.feature_engineering.FeatureEngineering.transform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.features.preprocess">
+<span id="src-features-preprocess-module"></span><h2>src.features.preprocess module<a class="headerlink" href="#module-src.features.preprocess" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="src.features.preprocess.apply_lemmatizer">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">apply_lemmatizer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.preprocess.apply_lemmatizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method applies lemma to given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – sentence to apply lemma operation, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.preprocess.apply_operation">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">apply_operation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">corpus</span></em>, <em class="sig-param"><span class="n">operation</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.features.preprocess.apply_operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method applies one operation and returns the result</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>corpus</strong> – list of sentences, :type list</p></li>
+<li><p><strong>operation</strong> – image operation</p></li>
+<li><p><strong>kwargs</strong> – (optional) params to apply operations,
+for stemmer stemmer operation and for remove stopwords stopwords list</p></li>
+</ul>
+</dd>
+</dl>
+<p>:return operation applied result</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.preprocess.apply_preprocess_operations_to_corpus">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">apply_preprocess_operations_to_corpus</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">corpus</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">operations</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#src.features.preprocess.apply_preprocess_operations_to_corpus" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method applies list of operations to given corpus</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>corpus</strong> – list of sentences, :type list</p></li>
+<li><p><strong>operations</strong> – <p>list of operations, :type list
+operations:</p>
+<blockquote>
+<div><ul>
+<li><p>remove_less_than_two</p></li>
+<li><p>apply_lemmatizer</p></li>
+<li><p>apply_stemmer</p></li>
+<li><p>remove_stopwords</p></li>
+<li><p>replace_special_chars</p></li>
+<li><p>remove_whitespace</p></li>
+<li><p>remove_punctuation</p></li>
+<li><p>remove_number</p></li>
+<li><p>to_lower</p></li>
+<li><p>remove_hyperlink</p></li>
+</ul>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>:param kwargs:(optional) params to apply operations,</dt><dd><p>for stemmer stemmer operation and for remove stopwords stopwords list</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>preprocessed sentences, :type list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.preprocess.apply_stemmer">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">apply_stemmer</code><span class="sig-paren">(</span><em class="sig-param">sentence: str</em>, <em class="sig-param">stemmer_name=&lt;PorterStemmer&gt;</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.preprocess.apply_stemmer" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method applies stemmer to given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentence</strong> – input string, :type str</p></li>
+<li><p><strong>stemmer_name</strong> – stemmer to apply: SnowballStemmer | PorterStemmer</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.preprocess.basic_preprocess_operations">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">basic_preprocess_operations</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.preprocess.basic_preprocess_operations" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>This method applies basic preprocess operations to given sentence:</dt><dd><p>remove_hyperlink &amp; replace_newline &amp; to_lower &amp; remove_number &amp; remove_punctuation &amp; remove_whitespace</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – sentence to apply preprocess operation, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.preprocess.remove_hyperlink">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">remove_hyperlink</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.preprocess.remove_hyperlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method remove hyperlinks &amp; emails &amp; mentions  from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.preprocess.remove_less_than_two">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">remove_less_than_two</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.preprocess.remove_less_than_two" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes less than two chars from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.preprocess.remove_number">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">remove_number</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.preprocess.remove_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes numbers from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.preprocess.remove_punctuation">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">remove_punctuation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.preprocess.remove_punctuation" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method remove punctuations from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.preprocess.remove_stopwords">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">remove_stopwords</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">stopwords</span><span class="p">:</span> <span class="n">list</span> <span class="o">=</span> <span class="default_value">frozenset({'a', 'about', 'above', 'across', 'after', 'afterwards', 'again', 'against', 'all', 'almost', 'alone', 'along', 'already', 'also', 'although', 'always', 'am', 'among', 'amongst', 'amoungst', 'amount', 'an', 'and', 'another', 'any', 'anyhow', 'anyone', 'anything', 'anyway', 'anywhere', 'are', 'around', 'as', 'at', 'back', 'be', 'became', 'because', 'become', 'becomes', 'becoming', 'been', 'before', 'beforehand', 'behind', 'being', 'below', 'beside', 'besides', 'between', 'beyond', 'bill', 'both', 'bottom', 'but', 'by', 'call', 'can', 'cannot', 'cant', 'co', 'con', 'could', 'couldnt', 'cry', 'de', 'describe', 'detail', 'do', 'done', 'down', 'due', 'during', 'each', 'eg', 'eight', 'either', 'eleven', 'else', 'elsewhere', 'empty', 'enough', 'etc', 'even', 'ever', 'every', 'everyone', 'everything', 'everywhere', 'except', 'few', 'fifteen', 'fifty', 'fill', 'find', 'fire', 'first', 'five', 'for', 'former', 'formerly', 'forty', 'found', 'four', 'from', 'front', 'full', 'further', 'get', 'give', 'go', 'had', 'has', 'hasnt', 'have', 'he', 'hence', 'her', 'here', 'hereafter', 'hereby', 'herein', 'hereupon', 'hers', 'herself', 'him', 'himself', 'his', 'how', 'however', 'hundred', 'i', 'ie', 'if', 'in', 'inc', 'indeed', 'interest', 'into', 'is', 'it', 'its', 'itself', 'keep', 'last', 'latter', 'latterly', 'least', 'less', 'ltd', 'made', 'many', 'may', 'me', 'meanwhile', 'might', 'mill', 'mine', 'more', 'moreover', 'most', 'mostly', 'move', 'much', 'must', 'my', 'myself', 'name', 'namely', 'neither', 'never', 'nevertheless', 'next', 'nine', 'no', 'nobody', 'none', 'noone', 'nor', 'not', 'nothing', 'now', 'nowhere', 'of', 'off', 'often', 'on', 'once', 'one', 'only', 'onto', 'or', 'other', 'others', 'otherwise', 'our', 'ours', 'ourselves', 'out', 'over', 'own', 'part', 'per', 'perhaps', 'please', 'put', 'rather', 're', 'same', 'see', 'seem', 'seemed', 'seeming', 'seems', 'serious', 'several', 'she', 'should', 'show', 'side', 'since', 'sincere', 'six', 'sixty', 'so', 'some', 'somehow', 'someone', 'something', 'sometime', 'sometimes', 'somewhere', 'still', 'such', 'system', 'take', 'ten', 'than', 'that', 'the', 'their', 'them', 'themselves', 'then', 'thence', 'there', 'thereafter', 'thereby', 'therefore', 'therein', 'thereupon', 'these', 'they', 'thick', 'thin', 'third', 'this', 'those', 'though', 'three', 'through', 'throughout', 'thru', 'thus', 'to', 'together', 'too', 'top', 'toward', 'towards', 'twelve', 'twenty', 'two', 'un', 'under', 'until', 'up', 'upon', 'us', 'very', 'via', 'was', 'we', 'well', 'were', 'what', 'whatever', 'when', 'whence', 'whenever', 'where', 'whereafter', 'whereas', 'whereby', 'wherein', 'whereupon', 'wherever', 'whether', 'which', 'while', 'whither', 'who', 'whoever', 'whole', 'whom', 'whose', 'why', 'will', 'with', 'within', 'without', 'would', 'yet', 'you', 'your', 'yours', 'yourself', 'yourselves'})</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.preprocess.remove_stopwords" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes stopwords from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentence</strong> – sentence to remove stopwords, :type str</p></li>
+<li><p><strong>stopwords</strong> – stopwords list, :type list</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>cleaned sentence</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.preprocess.remove_whitespace">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">remove_whitespace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.preprocess.remove_whitespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes extra white spaces from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.preprocess.replace_special_chars">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">replace_special_chars</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.preprocess.replace_special_chars" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method replaces newline character with space</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.preprocess.to_lower">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">to_lower</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.preprocess.to_lower" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method lowers sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.preprocess.tokenize_list_of_sentences">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">tokenize_list_of_sentences</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentences</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#src.features.preprocess.tokenize_list_of_sentences" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method tokenize list of sentences</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentences</strong> – sentence list</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.preprocess.tokenize_sentence">
+<code class="sig-prename descclassname">src.features.preprocess.</code><code class="sig-name descname">tokenize_sentence</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.preprocess.tokenize_sentence" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method tokenize sentences into tokens</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – sentence to tokenize, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.features">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.features" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="src.features.apply_stemmer">
+<code class="sig-prename descclassname">src.features.</code><code class="sig-name descname">apply_stemmer</code><span class="sig-paren">(</span><em class="sig-param">sentence: str</em>, <em class="sig-param">stemmer_name=&lt;PorterStemmer&gt;</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.apply_stemmer" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method applies stemmer to given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentence</strong> – input string, :type str</p></li>
+<li><p><strong>stemmer_name</strong> – stemmer to apply: SnowballStemmer | PorterStemmer</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.basic_preprocess_operations">
+<code class="sig-prename descclassname">src.features.</code><code class="sig-name descname">basic_preprocess_operations</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.basic_preprocess_operations" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>This method applies basic preprocess operations to given sentence:</dt><dd><p>remove_hyperlink &amp; replace_newline &amp; to_lower &amp; remove_number &amp; remove_punctuation &amp; remove_whitespace</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – sentence to apply preprocess operation, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.remove_hyperlink">
+<code class="sig-prename descclassname">src.features.</code><code class="sig-name descname">remove_hyperlink</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.remove_hyperlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method remove hyperlinks &amp; emails &amp; mentions  from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.remove_less_than_two">
+<code class="sig-prename descclassname">src.features.</code><code class="sig-name descname">remove_less_than_two</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.remove_less_than_two" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes less than two chars from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.remove_number">
+<code class="sig-prename descclassname">src.features.</code><code class="sig-name descname">remove_number</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.remove_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes numbers from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.remove_punctuation">
+<code class="sig-prename descclassname">src.features.</code><code class="sig-name descname">remove_punctuation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.remove_punctuation" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method remove punctuations from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.remove_stopwords">
+<code class="sig-prename descclassname">src.features.</code><code class="sig-name descname">remove_stopwords</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">stopwords</span><span class="p">:</span> <span class="n">list</span> <span class="o">=</span> <span class="default_value">frozenset({'a', 'about', 'above', 'across', 'after', 'afterwards', 'again', 'against', 'all', 'almost', 'alone', 'along', 'already', 'also', 'although', 'always', 'am', 'among', 'amongst', 'amoungst', 'amount', 'an', 'and', 'another', 'any', 'anyhow', 'anyone', 'anything', 'anyway', 'anywhere', 'are', 'around', 'as', 'at', 'back', 'be', 'became', 'because', 'become', 'becomes', 'becoming', 'been', 'before', 'beforehand', 'behind', 'being', 'below', 'beside', 'besides', 'between', 'beyond', 'bill', 'both', 'bottom', 'but', 'by', 'call', 'can', 'cannot', 'cant', 'co', 'con', 'could', 'couldnt', 'cry', 'de', 'describe', 'detail', 'do', 'done', 'down', 'due', 'during', 'each', 'eg', 'eight', 'either', 'eleven', 'else', 'elsewhere', 'empty', 'enough', 'etc', 'even', 'ever', 'every', 'everyone', 'everything', 'everywhere', 'except', 'few', 'fifteen', 'fifty', 'fill', 'find', 'fire', 'first', 'five', 'for', 'former', 'formerly', 'forty', 'found', 'four', 'from', 'front', 'full', 'further', 'get', 'give', 'go', 'had', 'has', 'hasnt', 'have', 'he', 'hence', 'her', 'here', 'hereafter', 'hereby', 'herein', 'hereupon', 'hers', 'herself', 'him', 'himself', 'his', 'how', 'however', 'hundred', 'i', 'ie', 'if', 'in', 'inc', 'indeed', 'interest', 'into', 'is', 'it', 'its', 'itself', 'keep', 'last', 'latter', 'latterly', 'least', 'less', 'ltd', 'made', 'many', 'may', 'me', 'meanwhile', 'might', 'mill', 'mine', 'more', 'moreover', 'most', 'mostly', 'move', 'much', 'must', 'my', 'myself', 'name', 'namely', 'neither', 'never', 'nevertheless', 'next', 'nine', 'no', 'nobody', 'none', 'noone', 'nor', 'not', 'nothing', 'now', 'nowhere', 'of', 'off', 'often', 'on', 'once', 'one', 'only', 'onto', 'or', 'other', 'others', 'otherwise', 'our', 'ours', 'ourselves', 'out', 'over', 'own', 'part', 'per', 'perhaps', 'please', 'put', 'rather', 're', 'same', 'see', 'seem', 'seemed', 'seeming', 'seems', 'serious', 'several', 'she', 'should', 'show', 'side', 'since', 'sincere', 'six', 'sixty', 'so', 'some', 'somehow', 'someone', 'something', 'sometime', 'sometimes', 'somewhere', 'still', 'such', 'system', 'take', 'ten', 'than', 'that', 'the', 'their', 'them', 'themselves', 'then', 'thence', 'there', 'thereafter', 'thereby', 'therefore', 'therein', 'thereupon', 'these', 'they', 'thick', 'thin', 'third', 'this', 'those', 'though', 'three', 'through', 'throughout', 'thru', 'thus', 'to', 'together', 'too', 'top', 'toward', 'towards', 'twelve', 'twenty', 'two', 'un', 'under', 'until', 'up', 'upon', 'us', 'very', 'via', 'was', 'we', 'well', 'were', 'what', 'whatever', 'when', 'whence', 'whenever', 'where', 'whereafter', 'whereas', 'whereby', 'wherein', 'whereupon', 'wherever', 'whether', 'which', 'while', 'whither', 'who', 'whoever', 'whole', 'whom', 'whose', 'why', 'will', 'with', 'within', 'without', 'would', 'yet', 'you', 'your', 'yours', 'yourself', 'yourselves'})</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.remove_stopwords" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes stopwords from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentence</strong> – sentence to remove stopwords, :type str</p></li>
+<li><p><strong>stopwords</strong> – stopwords list, :type list</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>cleaned sentence</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.remove_whitespace">
+<code class="sig-prename descclassname">src.features.</code><code class="sig-name descname">remove_whitespace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.remove_whitespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes extra white spaces from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.replace_special_chars">
+<code class="sig-prename descclassname">src.features.</code><code class="sig-name descname">replace_special_chars</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.replace_special_chars" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method replaces newline character with space</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.to_lower">
+<code class="sig-prename descclassname">src.features.</code><code class="sig-name descname">to_lower</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.to_lower" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method lowers sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.tokenize_list_of_sentences">
+<code class="sig-prename descclassname">src.features.</code><code class="sig-name descname">tokenize_list_of_sentences</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentences</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#src.features.tokenize_list_of_sentences" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method tokenize list of sentences</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentences</strong> – sentence list</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.features.tokenize_sentence">
+<code class="sig-prename descclassname">src.features.</code><code class="sig-name descname">tokenize_sentence</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.features.tokenize_sentence" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method tokenize sentences into tokens</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – sentence to tokenize, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+              <br/>
+              <a href="../_sources/api_docs/src.features.rst.txt"
+                rel="nofollow">Show Source</a>
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, havvanur.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.3.1.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

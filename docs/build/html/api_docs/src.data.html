@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>src.data package &#8212; K-Means Text Clustering Pipeline  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">K-Means Text Clustering Pipeline  documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="src-data-package">
+<h1>src.data package<a class="headerlink" href="#src-data-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-src.data.data_quality">
+<span id="src-data-data-quality-module"></span><h2>src.data.data_quality module<a class="headerlink" href="#module-src.data.data_quality" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="src.data.data_quality.create_data_quality_report">
+<code class="sig-prename descclassname">src.data.data_quality.</code><code class="sig-name descname">create_data_quality_report</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pandas_df</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">label_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#src.data.data_quality.create_data_quality_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method prints data quality analysis results</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pandas_df</strong> – dataFrame, :type DataFrame</p></li>
+<li><p><strong>label_name</strong> – label column name, :type str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.data.plots">
+<span id="src-data-plots-module"></span><h2>src.data.plots module<a class="headerlink" href="#module-src.data.plots" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="src.data.plots.plot_bar_chart">
+<code class="sig-prename descclassname">src.data.plots.</code><code class="sig-name descname">plot_bar_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">values</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.plots.plot_bar_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method plot bar chart</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> – list of labels, :type list</p></li>
+<li><p><strong>values</strong> – count of each label values, :type list</p></li>
+<li><p><strong>title</strong> – title of plot</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.plots.plot_cluster_result">
+<code class="sig-prename descclassname">src.data.plots.</code><code class="sig-name descname">plot_cluster_result</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">predictions</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.plots.plot_cluster_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method plot clustering results</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – trained DataFrame,</p></li>
+<li><p><strong>predictions</strong> – prediction results of model, :type list</p></li>
+<li><p><strong>model</strong> – fitted clustering model</p></li>
+<li><p><strong>title</strong> – title for plot</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.plots.plot_count_plot">
+<code class="sig-prename descclassname">src.data.plots.</code><code class="sig-name descname">plot_count_plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">label_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.plots.plot_count_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns count plot of the dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label_name</strong> – name of the class, :type str</p></li>
+<li><p><strong>data</strong> – input dataFrame, :type DataFrame</p></li>
+<li><p><strong>title</strong> – title of plot</p></li>
+</ul>
+</dd>
+</dl>
+<p>:return plt</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.plots.plot_dendogram">
+<code class="sig-prename descclassname">src.data.plots.</code><code class="sig-name descname">plot_dendogram</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.plots.plot_dendogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method plots dendogram to decide number of clusters in dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – train dataset, :type DataFrame</p>
+</dd>
+</dl>
+<p>:return dendogram</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.plots.plot_elbow">
+<code class="sig-prename descclassname">src.data.plots.</code><code class="sig-name descname">plot_elbow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">num_of_cluster_range</span><span class="p">:</span> <span class="n">set</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.plots.plot_elbow" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method provides elbow ploting result</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_of_cluster_range</strong> – range of the clusters, :type set</p></li>
+<li><p><strong>data</strong> – input data frame, :type DataFrame,</p></li>
+</ul>
+</dd>
+</dl>
+<p>:return plot</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.plots.plot_pie_chart">
+<code class="sig-prename descclassname">src.data.plots.</code><code class="sig-name descname">plot_pie_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">values</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.plots.plot_pie_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method plot pie chart</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> – list of labels, :type list</p></li>
+<li><p><strong>values</strong> – count of each label values, :type list</p></li>
+<li><p><strong>title</strong> – title of plot</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.plots.plot_wordcloud">
+<code class="sig-prename descclassname">src.data.plots.</code><code class="sig-name descname">plot_wordcloud</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">corpus</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">max_words</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">200</span></em>, <em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; wordcloud.wordcloud.WordCloud<a class="headerlink" href="#src.data.plots.plot_wordcloud" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method generates wordcloud for given corpus</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>corpus</strong> – list of sentences, :type str</p></li>
+<li><p><strong>max_words</strong> – maximum word count, :type int</p></li>
+<li><p><strong>title</strong> – label for sentences, :type str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>WordCloud</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.data.rw_utils">
+<span id="src-data-rw-utils-module"></span><h2>src.data.rw_utils module<a class="headerlink" href="#module-src.data.rw_utils" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="src.data.rw_utils.load_model">
+<code class="sig-prename descclassname">src.data.rw_utils.</code><code class="sig-name descname">load_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.rw_utils.load_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method loads the model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> – path of the mode, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.rw_utils.read_from_csv">
+<code class="sig-prename descclassname">src.data.rw_utils.</code><code class="sig-name descname">read_from_csv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">csv_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">sep</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">','</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#src.data.rw_utils.read_from_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method read data from csv file and  returns DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sep</strong> – csv seperator, :type str</p></li>
+<li><p><strong>csv_name</strong> – name of the csv, :type str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.rw_utils.read_from_db">
+<code class="sig-prename descclassname">src.data.rw_utils.</code><code class="sig-name descname">read_from_db</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">table_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'longform'</span></em>, <em class="sig-param"><span class="n">db_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'news.db'</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#src.data.rw_utils.read_from_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read data from db and returns dataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> – table name, :type str</p></li>
+<li><p><strong>db_name</strong> – db name, type: str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.rw_utils.write_to_csv">
+<code class="sig-prename descclassname">src.data.rw_utils.</code><code class="sig-name descname">write_to_csv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">csv_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.rw_utils.write_to_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method write data from csv file and  returns DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – data to save, :type str</p></li>
+<li><p><strong>csv_name</strong> – name of the csv, :type str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.rw_utils.write_to_db">
+<code class="sig-prename descclassname">src.data.rw_utils.</code><code class="sig-name descname">write_to_db</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">table_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">db_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'news.db'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.rw_utils.write_to_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write data to db</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> – table name, :type str</p></li>
+<li><p><strong>data</strong> – DataFrame to save</p></li>
+<li><p><strong>db_name</strong> – db name, type: str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.data" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="src.data.create_data_quality_report">
+<code class="sig-prename descclassname">src.data.</code><code class="sig-name descname">create_data_quality_report</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pandas_df</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">label_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#src.data.create_data_quality_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method prints data quality analysis results</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pandas_df</strong> – dataFrame, :type DataFrame</p></li>
+<li><p><strong>label_name</strong> – label column name, :type str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.load_model">
+<code class="sig-prename descclassname">src.data.</code><code class="sig-name descname">load_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.load_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method loads the model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> – path of the mode, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.plot_bar_chart">
+<code class="sig-prename descclassname">src.data.</code><code class="sig-name descname">plot_bar_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">values</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.plot_bar_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method plot bar chart</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> – list of labels, :type list</p></li>
+<li><p><strong>values</strong> – count of each label values, :type list</p></li>
+<li><p><strong>title</strong> – title of plot</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.plot_pie_chart">
+<code class="sig-prename descclassname">src.data.</code><code class="sig-name descname">plot_pie_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">values</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.plot_pie_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method plot pie chart</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> – list of labels, :type list</p></li>
+<li><p><strong>values</strong> – count of each label values, :type list</p></li>
+<li><p><strong>title</strong> – title of plot</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.plot_wordcloud">
+<code class="sig-prename descclassname">src.data.</code><code class="sig-name descname">plot_wordcloud</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">corpus</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">max_words</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">200</span></em>, <em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; wordcloud.wordcloud.WordCloud<a class="headerlink" href="#src.data.plot_wordcloud" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method generates wordcloud for given corpus</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>corpus</strong> – list of sentences, :type str</p></li>
+<li><p><strong>max_words</strong> – maximum word count, :type int</p></li>
+<li><p><strong>title</strong> – label for sentences, :type str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>WordCloud</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.read_from_csv">
+<code class="sig-prename descclassname">src.data.</code><code class="sig-name descname">read_from_csv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">csv_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">sep</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">','</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#src.data.read_from_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method read data from csv file and  returns DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sep</strong> – csv seperator, :type str</p></li>
+<li><p><strong>csv_name</strong> – name of the csv, :type str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.read_from_db">
+<code class="sig-prename descclassname">src.data.</code><code class="sig-name descname">read_from_db</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">table_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'longform'</span></em>, <em class="sig-param"><span class="n">db_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'news.db'</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#src.data.read_from_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read data from db and returns dataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> – table name, :type str</p></li>
+<li><p><strong>db_name</strong> – db name, type: str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.write_to_csv">
+<code class="sig-prename descclassname">src.data.</code><code class="sig-name descname">write_to_csv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">csv_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.write_to_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method write data from csv file and  returns DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – data to save, :type str</p></li>
+<li><p><strong>csv_name</strong> – name of the csv, :type str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.write_to_db">
+<code class="sig-prename descclassname">src.data.</code><code class="sig-name descname">write_to_db</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">table_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">db_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'news.db'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.write_to_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write data to db</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> – table name, :type str</p></li>
+<li><p><strong>data</strong> – DataFrame to save</p></li>
+<li><p><strong>db_name</strong> – db name, type: str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+              <br/>
+              <a href="../_sources/api_docs/src.data.rst.txt"
+                rel="nofollow">Show Source</a>
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, havvanur.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.3.1.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

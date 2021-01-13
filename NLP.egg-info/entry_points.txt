@@ -1,0 +1,3 @@
+[console_scripts]
+nlp = nlp_client:main
+

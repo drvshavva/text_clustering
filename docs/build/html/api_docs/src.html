@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>src package &#8212; K-Means Text Clustering Pipeline  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">K-Means Text Clustering Pipeline  documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="src-package">
+<h1>src package<a class="headerlink" href="#src-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="src.data.html">src.data package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="src.data.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.data.html#module-src.data.data_quality">src.data.data_quality module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.data.html#module-src.data.plots">src.data.plots module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.data.html#module-src.data.rw_utils">src.data.rw_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.data.html#module-src.data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="src.features.html">src.features package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="src.features.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.features.html#module-src.features.feature_engineering">src.features.feature_engineering module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.features.html#module-src.features.preprocess">src.features.preprocess module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.features.html#module-src.features">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="src.models.html">src.models package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="src.models.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.models.html#module-src.models.pipelines">src.models.pipelines module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.models.html#module-src.models">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="src-nlp-client-module">
+<h2>src.nlp_client module<a class="headerlink" href="#src-nlp-client-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-src">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="src.apply_stemmer">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">apply_stemmer</code><span class="sig-paren">(</span><em class="sig-param">sentence: str</em>, <em class="sig-param">stemmer_name=&lt;PorterStemmer&gt;</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.apply_stemmer" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method applies stemmer to given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentence</strong> – input string, :type str</p></li>
+<li><p><strong>stemmer_name</strong> – stemmer to apply: SnowballStemmer | PorterStemmer</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.basic_preprocess_operations">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">basic_preprocess_operations</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.basic_preprocess_operations" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>This method applies basic preprocess operations to given sentence:</dt><dd><p>remove_hyperlink &amp; replace_newline &amp; to_lower &amp; remove_number &amp; remove_punctuation &amp; remove_whitespace</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – sentence to apply preprocess operation, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.create_data_quality_report">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">create_data_quality_report</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pandas_df</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">label_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#src.create_data_quality_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method prints data quality analysis results</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pandas_df</strong> – dataFrame, :type DataFrame</p></li>
+<li><p><strong>label_name</strong> – label column name, :type str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.load_model">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">load_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.load_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method loads the model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> – path of the mode, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.pipeline">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">pipeline</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">corpus</span></em>, <em class="sig-param"><span class="n">n_cluster</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">max_df</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">min_df</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">max_features</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">analyzer</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'word'</span></em>, <em class="sig-param"><span class="n">n_gram</span><span class="o">=</span><span class="default_value">(1, 1)</span></em>, <em class="sig-param"><span class="n">n_components</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">40</span></em>, <em class="sig-param"><span class="n">idf</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.pipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method applies tf-idf, svd and k-means clustering with given parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_gram</strong> – </p></li>
+<li><p><strong>analyzer</strong> – </p></li>
+<li><p><strong>labels</strong> – list of labels</p></li>
+<li><p><strong>idf</strong> – use idf</p></li>
+<li><p><strong>corpus</strong> – data to train</p></li>
+<li><p><strong>n_cluster</strong> – number of clusters</p></li>
+<li><p><strong>max_df</strong> – </p></li>
+<li><p><strong>min_df</strong> – </p></li>
+<li><p><strong>max_features</strong> – </p></li>
+<li><p><strong>n_components</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.plot_bar_chart">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">plot_bar_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">values</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.plot_bar_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method plot bar chart</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> – list of labels, :type list</p></li>
+<li><p><strong>values</strong> – count of each label values, :type list</p></li>
+<li><p><strong>title</strong> – title of plot</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.plot_pie_chart">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">plot_pie_chart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">values</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.plot_pie_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method plot pie chart</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> – list of labels, :type list</p></li>
+<li><p><strong>values</strong> – count of each label values, :type list</p></li>
+<li><p><strong>title</strong> – title of plot</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.plot_wordcloud">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">plot_wordcloud</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">corpus</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">max_words</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">200</span></em>, <em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; wordcloud.wordcloud.WordCloud<a class="headerlink" href="#src.plot_wordcloud" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method generates wordcloud for given corpus</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>corpus</strong> – list of sentences, :type str</p></li>
+<li><p><strong>max_words</strong> – maximum word count, :type int</p></li>
+<li><p><strong>title</strong> – label for sentences, :type str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>WordCloud</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.read_from_csv">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">read_from_csv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">csv_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">sep</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">','</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#src.read_from_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method read data from csv file and  returns DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sep</strong> – csv seperator, :type str</p></li>
+<li><p><strong>csv_name</strong> – name of the csv, :type str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.read_from_db">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">read_from_db</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">table_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'longform'</span></em>, <em class="sig-param"><span class="n">db_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'news.db'</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#src.read_from_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read data from db and returns dataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> – table name, :type str</p></li>
+<li><p><strong>db_name</strong> – db name, type: str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.remove_hyperlink">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">remove_hyperlink</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.remove_hyperlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method remove hyperlinks &amp; emails &amp; mentions  from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.remove_less_than_two">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">remove_less_than_two</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.remove_less_than_two" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes less than two chars from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.remove_number">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">remove_number</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.remove_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes numbers from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.remove_punctuation">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">remove_punctuation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.remove_punctuation" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method remove punctuations from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.remove_stopwords">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">remove_stopwords</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">stopwords</span><span class="p">:</span> <span class="n">list</span> <span class="o">=</span> <span class="default_value">frozenset({'a', 'about', 'above', 'across', 'after', 'afterwards', 'again', 'against', 'all', 'almost', 'alone', 'along', 'already', 'also', 'although', 'always', 'am', 'among', 'amongst', 'amoungst', 'amount', 'an', 'and', 'another', 'any', 'anyhow', 'anyone', 'anything', 'anyway', 'anywhere', 'are', 'around', 'as', 'at', 'back', 'be', 'became', 'because', 'become', 'becomes', 'becoming', 'been', 'before', 'beforehand', 'behind', 'being', 'below', 'beside', 'besides', 'between', 'beyond', 'bill', 'both', 'bottom', 'but', 'by', 'call', 'can', 'cannot', 'cant', 'co', 'con', 'could', 'couldnt', 'cry', 'de', 'describe', 'detail', 'do', 'done', 'down', 'due', 'during', 'each', 'eg', 'eight', 'either', 'eleven', 'else', 'elsewhere', 'empty', 'enough', 'etc', 'even', 'ever', 'every', 'everyone', 'everything', 'everywhere', 'except', 'few', 'fifteen', 'fifty', 'fill', 'find', 'fire', 'first', 'five', 'for', 'former', 'formerly', 'forty', 'found', 'four', 'from', 'front', 'full', 'further', 'get', 'give', 'go', 'had', 'has', 'hasnt', 'have', 'he', 'hence', 'her', 'here', 'hereafter', 'hereby', 'herein', 'hereupon', 'hers', 'herself', 'him', 'himself', 'his', 'how', 'however', 'hundred', 'i', 'ie', 'if', 'in', 'inc', 'indeed', 'interest', 'into', 'is', 'it', 'its', 'itself', 'keep', 'last', 'latter', 'latterly', 'least', 'less', 'ltd', 'made', 'many', 'may', 'me', 'meanwhile', 'might', 'mill', 'mine', 'more', 'moreover', 'most', 'mostly', 'move', 'much', 'must', 'my', 'myself', 'name', 'namely', 'neither', 'never', 'nevertheless', 'next', 'nine', 'no', 'nobody', 'none', 'noone', 'nor', 'not', 'nothing', 'now', 'nowhere', 'of', 'off', 'often', 'on', 'once', 'one', 'only', 'onto', 'or', 'other', 'others', 'otherwise', 'our', 'ours', 'ourselves', 'out', 'over', 'own', 'part', 'per', 'perhaps', 'please', 'put', 'rather', 're', 'same', 'see', 'seem', 'seemed', 'seeming', 'seems', 'serious', 'several', 'she', 'should', 'show', 'side', 'since', 'sincere', 'six', 'sixty', 'so', 'some', 'somehow', 'someone', 'something', 'sometime', 'sometimes', 'somewhere', 'still', 'such', 'system', 'take', 'ten', 'than', 'that', 'the', 'their', 'them', 'themselves', 'then', 'thence', 'there', 'thereafter', 'thereby', 'therefore', 'therein', 'thereupon', 'these', 'they', 'thick', 'thin', 'third', 'this', 'those', 'though', 'three', 'through', 'throughout', 'thru', 'thus', 'to', 'together', 'too', 'top', 'toward', 'towards', 'twelve', 'twenty', 'two', 'un', 'under', 'until', 'up', 'upon', 'us', 'very', 'via', 'was', 'we', 'well', 'were', 'what', 'whatever', 'when', 'whence', 'whenever', 'where', 'whereafter', 'whereas', 'whereby', 'wherein', 'whereupon', 'wherever', 'whether', 'which', 'while', 'whither', 'who', 'whoever', 'whole', 'whom', 'whose', 'why', 'will', 'with', 'within', 'without', 'would', 'yet', 'you', 'your', 'yours', 'yourself', 'yourselves'})</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.remove_stopwords" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes stopwords from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentence</strong> – sentence to remove stopwords, :type str</p></li>
+<li><p><strong>stopwords</strong> – stopwords list, :type list</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>cleaned sentence</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.remove_whitespace">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">remove_whitespace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.remove_whitespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes extra white spaces from given sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.replace_special_chars">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">replace_special_chars</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.replace_special_chars" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method replaces newline character with space</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.to_lower">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">to_lower</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.to_lower" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method lowers sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – input sentence file, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.tokenize_list_of_sentences">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">tokenize_list_of_sentences</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentences</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#src.tokenize_list_of_sentences" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method tokenize list of sentences</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentences</strong> – sentence list</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.tokenize_sentence">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">tokenize_sentence</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sentence</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#src.tokenize_sentence" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method tokenize sentences into tokens</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sentence</strong> – sentence to tokenize, :type str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.write_to_csv">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">write_to_csv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">csv_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.write_to_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method write data from csv file and  returns DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – data to save, :type str</p></li>
+<li><p><strong>csv_name</strong> – name of the csv, :type str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.write_to_db">
+<code class="sig-prename descclassname">src.</code><code class="sig-name descname">write_to_db</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">table_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">db_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'news.db'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.write_to_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write data to db</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> – table name, :type str</p></li>
+<li><p><strong>data</strong> – DataFrame to save</p></li>
+<li><p><strong>db_name</strong> – db name, type: str</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+              <br/>
+              <a href="../_sources/api_docs/src.rst.txt"
+                rel="nofollow">Show Source</a>
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, havvanur.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.3.1.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
