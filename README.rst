@@ -3,9 +3,6 @@ Textual Data Clustering Project
 
 This project provides end-to-end requirements for text clustering.
 
-* Student No: 20501001
-* Student : Havvanur Dervisoglu
-
  * For using run the command below in the project folder:
     $ pip install -e .
  * Documentation directory:
